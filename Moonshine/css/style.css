@@ -114,10 +114,18 @@ section:nth-child(2n) {
 	width: 16.666667%;
 	z-index: 1000;
 	background-color: #eee;
+	text-align: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 .site-nav.stuck {
 	position: fixed;
 	top: 0;
+}
+
+.nav-logo {
+	display: inline-block;
+	width: 90%;
 }
 
 .site-nav ul {
@@ -127,7 +135,16 @@ section:nth-child(2n) {
 }
 
 .site-nav ul li {
-	padding: 1rem 2rem;
+
+}
+
+.site-nav ul li a{
+	padding: 1rem 1.5rem;
+	display: block;
+}
+
+.site-nav ul li a.selected {
+
 }
 
 .site-header {

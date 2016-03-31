@@ -38,6 +38,11 @@ $(function() {
       $('#' + active_id).addClass('current');
 
       window.location.hash = active_id;
+
+      $('.site-header h1').html(function() {
+        var name = $('#' + active_id).data('title');
+        return name
+      })
     }
   });
 
