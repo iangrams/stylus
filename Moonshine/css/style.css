@@ -122,6 +122,7 @@ section:nth-child(2n) {
 
 .swatch{
 	width:100px;
+	height:100px;
 }
 
 .title {
