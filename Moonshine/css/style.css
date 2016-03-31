@@ -1,13 +1,20 @@
 /*------------------------------*/
-/*            Global            */
+/*        Global/Utility        */
 /*------------------------------*/
 
 * {
 	box-sizing: border-box;
 }
 
+.clearfix::before,
+.clearfix::after {
+	content: " ";
+	display: table;
+}
 
-
+.clearfix:after {
+    clear: both;
+}
 
 /*------------------------------*/
 /*             Type             */
@@ -18,28 +25,26 @@
 /*------------------------------*/
 /*            Layout            */
 /*------------------------------*/
-section {
-	height: 100vh;
-}
-
 .first-page {
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 1025;
 	width: 100%;
+	height: 100vh;
 
 	background: #ccc;
 }
 
 .first-page + section {
-	margin-top: 100vh;
+	margin-top: calc(100vh + 75px);
 }
 
-section + section {
+section .wrapper {
+	min-height: calc(100vh - 75px);
 	width: 75%;
 	margin-left: 25%;
-	padding-top: 75px;
+	margin-top: 75px;
 }
 
 section:nth-child(2n+1) {

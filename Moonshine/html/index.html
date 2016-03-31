@@ -18,10 +18,10 @@
 	<nav class="site-nav">
 		<ul>
 			<li>
-				<a href="#link">Home</a>
+				<a href="#home">Home</a>
 			</li>
 			<li>
-				<a href="#link">Home</a>
+				<a href="#nothome">NotHome</a>
 			</li>
 			<li>
 				<a href="#link">Home</a>
@@ -36,40 +36,42 @@
 		<h1>Section Name</h1>
 	</header>
 
-	<section id="home" class="first-page">
+	<section id="home" class="first-page clearfix">
 		<h1>First P0st!</h1>
 
 		<small>Pro Tip: Scroll down</small>
 	</section>
 
-	<section id="nothome">
+	<section id="nothome" class="clearfix">
+		<div class="wrapper">
+			<div index="0" class="card">
+				<div class="title">
+					This is a title
+					<a class="edit" href="#">Edit</a>
+				</div>
+				<div class="content">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus eros, dignissim sed suscipit quis, convallis id orci. Integer tellus lorem, tempor quis metus a, molestie mattis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed consectetur vehicula condimentum. Quisque at velit ante. Quisque fermentum lectus vel turpis faucibus, id iaculis dolor tristique. Etiam ante purus, dignissim et viverra ac, luctus vel orci. Ut dictum sapien eu dui posuere laoreet. Maecenas ac aliquam purus, id fermentum lectus. Cras tincidunt risus dui, et elementum erat tempor in. Praesent id neque mi.
 
-		<div index="0" class="card">
-			<div class="title">
-				This is a title
-				<a class="edit" href="#">Edit</a>
+					Phasellus at ornare nunc. Donec tincidunt, elit eu egestas sodales, nunc magna blandit erat, sed commodo nunc odio in mi. Duis et semper est. Duis eleifend fermentum ligula eget scelerisque. Maecenas nec dignissim nisi. Proin eu venenatis est. Cras interdum sagittis leo, ut convallis enim sodales at. Etiam vel dolor vitae ligula auctor vehicula. Praesent sit amet turpis lectus. Nam quis erat est. Sed quis molestie urna, sit amet pulvinar velit. Morbi pulvinar lectus in orci pharetra, vel vestibulum magna volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec venenatis maximus nisi, in laoreet lectus bibendum nec. Nulla condimentum sem in lacus sollicitudin, in mollis arcu posuere.
+				</div>
+				<textarea class="editcontent" style="display:none;"></textarea>
 			</div>
-			<div class="content">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus eros, dignissim sed suscipit quis, convallis id orci. Integer tellus lorem, tempor quis metus a, molestie mattis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed consectetur vehicula condimentum. Quisque at velit ante. Quisque fermentum lectus vel turpis faucibus, id iaculis dolor tristique. Etiam ante purus, dignissim et viverra ac, luctus vel orci. Ut dictum sapien eu dui posuere laoreet. Maecenas ac aliquam purus, id fermentum lectus. Cras tincidunt risus dui, et elementum erat tempor in. Praesent id neque mi.
-
-				Phasellus at ornare nunc. Donec tincidunt, elit eu egestas sodales, nunc magna blandit erat, sed commodo nunc odio in mi. Duis et semper est. Duis eleifend fermentum ligula eget scelerisque. Maecenas nec dignissim nisi. Proin eu venenatis est. Cras interdum sagittis leo, ut convallis enim sodales at. Etiam vel dolor vitae ligula auctor vehicula. Praesent sit amet turpis lectus. Nam quis erat est. Sed quis molestie urna, sit amet pulvinar velit. Morbi pulvinar lectus in orci pharetra, vel vestibulum magna volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec venenatis maximus nisi, in laoreet lectus bibendum nec. Nulla condimentum sem in lacus sollicitudin, in mollis arcu posuere.
-			</div>
-			<textarea class="editcontent" style="display:none;"></textarea>
-		</div>
-		<div class="card add">
-			<div class="title">
-				Add new card
+			<div class="card add">
+				<div class="title">
+					Add new card
+				</div>
 			</div>
 		</div>
-		
 	</section>
 
-	<section id="alsonothome">
-
+	<section id="alsonothome" class="clearfix">
+		<div class="wrapper">
+		</div>
 	</section>
 
-	<section id="sayitwithmenow">
-
+	<section id="sayitwithmenow" class="clearfix">
+		<div class="wrapper">
+		</div>
 	</section>
 
 	<script src="../js/jquery-2.2.2.js"></script>
