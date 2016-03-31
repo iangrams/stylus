@@ -182,3 +182,12 @@ section:nth-child(2n) {
 .colorbox input{
 	width: 100px;
 }
+
+.font-demo{
+	margin: 12px;
+	float: right;
+}
+
+.font-demo p{
+	margin-top: -14px;
+}

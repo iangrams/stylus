@@ -16,6 +16,7 @@ var stickyHeader = new Waypoint.Sticky({
 $(function() {
   var sections = $('section');
   var navigation_links = $('nav a');
+  var font_demo = $('.font-demo');
 
   sections.waypoint({
     handler: function(event, direction) {
@@ -50,6 +51,12 @@ $(function() {
       }
     );
   });
+
+  for (var i = 100; i < 900; i+=100) {
+  	var line = $('<p>').text('The quick brown fox jumps over the lazy dog.').css('font-weight', i);
+  	font_demo.append(line);
+  	font_demo.append(line.clone().css('font-style', 'italic'));
+  };
 });
 
 $(document).ready(function() {
