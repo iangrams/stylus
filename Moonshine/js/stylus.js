@@ -31,8 +31,8 @@ $(function() {
 
       console.log(active_id);
 
-      navigation_links.removeClass('selected');
-      active_link.addClass('selected');
+      navigation_links.parent().removeClass('selected');
+      active_link.parent().addClass('selected');
 
       sections.removeClass('current');
       $('#' + active_id).addClass('current');
