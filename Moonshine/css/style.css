@@ -1,4 +1,15 @@
 /*------------------------------*/
+/*            Global            */
+/*------------------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+
+
+
+/*------------------------------*/
 /*             Type             */
 /*------------------------------*/
 
@@ -8,13 +19,46 @@
 /*            Layout            */
 /*------------------------------*/
 
+.first-page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1025;
 
+	background: #ccc;
+}
+
+
+section {
+	width: 100%;
+	height: 100vh;
+}
 
 
 /*------------------------------*/
 /*          Navigation          */
 /*------------------------------*/
 
+.site-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 25%;
+	z-index: 1000;
+	background-color: #eee;
+}
+
+.site-header {
+	position: fixed;
+	top: 0;
+	left: 25%;
+	height: 75px;
+	width: 75%;
+	z-index: 1001;
+	background-color: #ddd;
+	padding: 1rem;
+}
 
 
 .card{
