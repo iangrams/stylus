@@ -31,13 +31,18 @@ $(function() {
 
       console.log(active_id);
 
-      navigation_links.removeClass('selected');
-      active_link.addClass('selected');
+      navigation_links.parent().removeClass('selected');
+      active_link.parent().addClass('selected');
 
       sections.removeClass('current');
       $('#' + active_id).addClass('current');
 
       window.location.hash = active_id;
+
+      $('.site-header h1').html(function() {
+        var name = $('#' + active_id).data('title');
+        return name
+      })
     }
   });
 
@@ -76,13 +81,13 @@ $(document).ready(function() {
 		$(this).siblings('span').show();
 	});
 	//Font demo section
-	$('.font-demo h1').on('click',function(event) {
+	$('.font-demo h2').on('click',function(event) {
 		$(this).hide();
 		$(this).siblings('input').show().focus();
 	});
 	$('.font-demo input').on('change',function(event) {
 		$(this).parents('.font-demo').css('font-family', $(this).val());
 		$(this).hide();
-		$(this).siblings('h1').text($(this).val()).show();
+		$(this).siblings('h2').text($(this).val()).show();
 	});
 });
