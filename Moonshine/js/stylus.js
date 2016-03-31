@@ -38,8 +38,7 @@ $(function() {
       $('#' + active_id).addClass('current');
 
       window.location.hash = active_id;
-    },
-    //offset: '35%'
+    }
   });
 
   navigation_links.on('click', function(event) {
