@@ -12,6 +12,47 @@ var stickyHeader = new Waypoint.Sticky({
 	wrapper: false
 });
 
+/* Scroll Highlights and Actives */
+$(function() {
+  var sections = $('section');
+  var navigation_links = $('nav a');
+
+  sections.waypoint({
+    handler: function(event, direction) {
+      var active_section;
+      active_section = $(this);
+      active_id = active_section[0].element.id;
+      active_element = active_section[0].element;
+
+      if (direction === 'up') active_section = active_section.prev();
+
+      var active_link = $('nav a[href="#' + active_id + '"]');
+
+      console.log(active_id);
+
+      navigation_links.removeClass('selected');
+      active_link.addClass('selected');
+
+      sections.removeClass('current');
+      $('#' + active_id).addClass('current');
+
+      window.location.hash = active_id;
+    },
+    //offset: '35%'
+  });
+
+  navigation_links.on('click', function(event) {
+    event.preventDefault();
+    $.scrollTo(
+      $(this).attr("href"),
+      {
+        duration: 500,
+        //offset: { 'left':0, 'top':-0.15*$(window).height() }
+      }
+    );
+  });
+});
+
 $(document).ready(function() {
 	$('.colorbox').on('click', function(event) {
 		event.preventDefault();
