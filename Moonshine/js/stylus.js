@@ -7,6 +7,20 @@ $(document).ready(function() {
 	});
 });
 
+var stickyNav = new Waypoint.Sticky({
+  element: $('.site-nav')[0],
+	direction: 'down right',
+	stuckClass: 'stuck',
+	wrapper: false
+});
+
+var stickyHeader = new Waypoint.Sticky({
+  element: $('.site-header')[0],
+	direction: 'down right',
+	stuckClass: 'stuck',
+	wrapper: false
+});
+
 function setupEdit(){
 	$('.edit, .save').off('click');
 	$('.edit').on('click', function(event){
