@@ -121,43 +121,29 @@ section:nth-child(2n) {
 /*------------------------------*/
 
 .swatch{
-	width:100px;
-	height:100px;
-}
-
-.title {
-    padding: 1rem;
-    background-color: #00AAFF;
-}
-
-.content{
-	padding: 1rem;
-}
-
-.edit, .save{
-	float: right;
-}
-
-.editcontent{
-	width: 100%;
-	height: 100px;
+	width:6rem;
+	height:6rem;
 }
 
 .colorbox{
-	width: 100px;
+	width: 5rem;
     float: right;
-    margin: 24px;
+    margin: 2rem;
 }
 
 .colorbox input{
-	width: 100px;
+	width: 6rem;
 }
 
 .font-demo{
-	margin: 12px;
+	margin: 1rem;
 	float: right;
 }
 
 .font-demo p{
-	margin-top: -14px;
+	margin-top: -1rem;
+}
+
+.font-demo input{
+	margin-bottom: 1rem;
 }
