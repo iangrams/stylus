@@ -1,12 +1,3 @@
-$(document).ready(function() {
-	$('.add').on('click', function(event){
-		var numcards = $('.card').length - 1;
-		var cardcopy = $('div[index="0"]').clone().attr('index',numcards);
-		cardcopy.insertBefore('.add');
-		setupEdit();
-	});
-});
-
 var stickyNav = new Waypoint.Sticky({
   element: $('.site-nav')[0],
 	direction: 'down right',
@@ -21,23 +12,19 @@ var stickyHeader = new Waypoint.Sticky({
 	wrapper: false
 });
 
-function setupEdit(){
-	$('.edit, .save').off('click');
-	$('.edit').on('click', function(event){
+$(document).ready(function() {
+	$('.colorbox').on('click', function(event) {
 		event.preventDefault();
-		var content = $(this).parent().siblings('.content');
-		var text = content.text();
-		content.css('display', 'none');
-		$(this).parent().siblings('.editcontent').val(text).css('display', 'block');
-		$(this).text('Save').addClass('save').removeClass('edit');
-		setupEdit();
+		$(this).find('input').show().focus();
+		$(this).find('span').hide();
 	});
-	$('.save').on('click', function(event) {
+	$('.colorbox input').on('change', function(event) {
 		event.preventDefault();
-		var content = $(this).parent().siblings('.content');
-		content.text($(this).parent().siblings('.editcontent').val()).css('display', 'block');
-		$('.editcontent').css('display', 'none');
-		$(this).text('Edit').addClass('edit').removeClass('save');
-		setupEdit();
+		$(this).siblings('.swatch').css('background-color', $(this).val());
+		$(this).siblings('span').text($(this).val());
 	});
-}
+	$('.colorbox input').on('blur', function(event) {
+		$(this).hide();
+		$(this).siblings('span').show();
+	});
+});
