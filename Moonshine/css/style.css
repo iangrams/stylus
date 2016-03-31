@@ -76,30 +76,11 @@ section:nth-child(2n+1) {
 /*         Other Stuff          */
 /*------------------------------*/
 
-.card{
-	box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.2);
-	min-height: 42px;
-	margin-top: 12px;
-}
-
-.title {
-    padding: 12px;
-    background-color: #00AAFF;
-}
-
-.content{
-	padding: 12px;
-}
-
-.edit, .save{
-	float: right;
-}
-
-.editcontent{
-	width: 100%;
+.swatch{
+	width:100px;
 	height: 100px;
 }
 
-div[index='0']{
-	display: none;
+.colorbox input{
+	width: 100px;
 }
