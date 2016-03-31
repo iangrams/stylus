@@ -55,7 +55,7 @@ $(function() {
     );
   });
 
-  for (var i = 100; i < 900; i+=100) {
+  for (var i = 100; i < 900; i+=200) {
   	var line = $('<p>').text('The quick brown fox jumps over the lazy dog.').css('font-weight', i);
   	font_demo.append(line);
   	font_demo.append(line.clone().css('font-style', 'italic'));
@@ -63,6 +63,7 @@ $(function() {
 });
 
 $(document).ready(function() {
+	//Color swatch section
 	$('.colorbox').on('click', function(event) {
 		event.preventDefault();
 		$(this).find('input').show().focus();
@@ -76,5 +77,15 @@ $(document).ready(function() {
 	$('.colorbox input').on('blur', function(event) {
 		$(this).hide();
 		$(this).siblings('span').show();
+	});
+	//Font demo section
+	$('.font-demo h2').on('click',function(event) {
+		$(this).hide();
+		$(this).siblings('input').show().focus();
+	});
+	$('.font-demo input').on('change',function(event) {
+		$(this).parents('.font-demo').css('font-family', $(this).val());
+		$(this).hide();
+		$(this).siblings('h2').text($(this).val()).show();
 	});
 });
