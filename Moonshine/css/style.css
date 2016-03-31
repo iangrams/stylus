@@ -1,33 +1,55 @@
 /*------------------------------*/
-/*            Global            */
+/*        Global/Utility        */
 /*------------------------------*/
 
 * {
 	box-sizing: border-box;
 }
 
+.clearfix::before,
+.clearfix::after {
+	content: " ";
+	display: table;
+}
 
+.clearfix:after {
+    clear: both;
+}
 
+html {
+	font-family: ;
+}
 
 /*------------------------------*/
 /*             Type             */
 /*------------------------------*/
 
+h1 {
 
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+p {
+
+}
 
 /*------------------------------*/
 /*            Layout            */
 /*------------------------------*/
-section {
-	height: 100vh;
-}
-
 .first-page {
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 1025;
 	width: 100%;
+	height: 100vh;
 
 	background: #ccc;
 }
@@ -36,10 +58,12 @@ section {
 	margin-top: 100vh;
 }
 
-section + section {
+section .wrapper {
+	min-height: calc(100vh - 75px);
 	width: 75%;
 	margin-left: 25%;
-	padding-top: 75px;
+	margin-top: 75px;
+	padding: 1rem;
 }
 
 section:nth-child(2n+1) {
@@ -51,24 +75,34 @@ section:nth-child(2n+1) {
 /*------------------------------*/
 
 .site-nav {
-	position: fixed;
-	top: 0;
+	position: absolute;
+	top: 100vh;
 	left: 0;
 	height: 100%;
 	width: 25%;
 	z-index: 1000;
 	background-color: #eee;
 }
-
-.site-header {
+.site-nav.stuck {
 	position: fixed;
 	top: 0;
+	left: 0;
+}
+
+.site-header {
+	position: absolute;
+	top: 100vh;
 	left: 25%;
 	height: 75px;
 	width: 75%;
 	z-index: 1001;
 	background-color: #ddd;
 	padding: 1rem;
+}
+.site-header.stuck {
+	position: fixed;
+	top: 0;
+	left: 25%;
 }
 
 
@@ -78,6 +112,23 @@ section:nth-child(2n+1) {
 
 .swatch{
 	width:100px;
+}
+
+.title {
+    padding: 1rem;
+    background-color: #00AAFF;
+}
+
+.content{
+	padding: 1rem;
+}
+
+.edit, .save{
+	float: right;
+}
+
+.editcontent{
+	width: 100%;
 	height: 100px;
 }
 

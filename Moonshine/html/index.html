@@ -18,10 +18,10 @@
 	<nav class="site-nav">
 		<ul>
 			<li>
-				<a href="#link">Home</a>
+				<a href="#home">Home</a>
 			</li>
 			<li>
-				<a href="#link">Home</a>
+				<a href="#nothome">NotHome</a>
 			</li>
 			<li>
 				<a href="#link">Home</a>
@@ -36,41 +36,46 @@
 		<h1>Section Name</h1>
 	</header>
 
-	<section id="home" class="first-page">
+	<section id="home" class="first-page clearfix">
 		<h1>First P0st!</h1>
 
 		<small>Pro Tip: Scroll down</small>
 	</section>
 
 	<section id="nothome">
-		
-	</section>
-
-	<section id="colors">
-		<div class="colorbox">
-			<div class="swatch" style="background-color:#FF0000;"></div>
-			<span>#FF0000</span>
-			<input type="text" style="display:none;" value="#FF0000"></input>
-		</div>
-		<div class="colorbox">
-			<div class="swatch" style="background-color:#0000FF;"></div>
-			<span>#0000FF</span>
-			<input type="text" style="display:none;" value="#0000FF"></input>
-		</div>
-		<div class="colorbox">
-			<div class="swatch" style="background-color:#00FF00;"></div>
-			<span>#00FF00</span>
-			<input type="text" style="display:none;" value="#00FF00"></input>
+		<div class="wrapper">
+			<div class="colorbox">
+				<div class="swatch" style="background-color:#FF0000;"></div>
+				<span>#FF0000</span>
+				<input type="text" style="display:none;" value="#FF0000"></input>
+			</div>
+			<div class="colorbox">
+				<div class="swatch" style="background-color:#0000FF;"></div>
+				<span>#0000FF</span>
+				<input type="text" style="display:none;" value="#0000FF"></input>
+			</div>
+			<div class="colorbox">
+				<div class="swatch" style="background-color:#00FF00;"></div>
+				<span>#00FF00</span>
+				<input type="text" style="display:none;" value="#00FF00"></input>
+			</div>
 		</div>
 	</section>
 
-	<section id="sayitwithmenow">
+	<section id="alsonothome" class="clearfix">
+		<div class="wrapper">
+		</div>
+	</section>
 
+	<section id="sayitwithmenow" class="clearfix">
+		<div class="wrapper">
+		</div>
 	</section>
 
 	<script src="../js/jquery-2.2.2.js"></script>
-	<script src="../js/stylus.js"></script>
 	<script src="../js/jquery.waypoints.js"></script>
+	<script src="../js/sticky.js"></script>
+	<script src="../js/stylus.js"></script>
 
 </body>
 </html>
