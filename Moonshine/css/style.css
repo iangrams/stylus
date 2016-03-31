@@ -143,6 +143,12 @@ section:nth-child(2n) {
 	height: 100px;
 }
 
+.colorbox{
+	width: 100px;
+    float: right;
+    margin: 24px;
+}
+
 .colorbox input{
 	width: 100px;
 }
