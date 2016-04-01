@@ -370,7 +370,7 @@ hr.white {
 .changelog {
 	width: 90%;
 	display: inline-block;
-	margin-top: 3rem;
+	margin-top: 5rem;
 	margin-left: 5%;
 }
 /*---------- Logos -----------*/
@@ -547,4 +547,8 @@ ul.list {
 	height: 3rem;
 	bottom: 10%;
 	left: 0;
+}
+
+.no-bg {
+	background: none;
 }
