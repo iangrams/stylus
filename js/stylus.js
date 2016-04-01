@@ -20,18 +20,23 @@ $(function() {
   var allchars = font_demo.find('.allchars');
 
   sections.waypoint({
-    handler: function(event, direction) {
-      var active_section;
-      active_section = $(this);
-      active_id = active_section[0].element.id;
-      active_element = active_section[0].element;
+    handler: function(direction) {
 
-      if (direction === 'up') active_section = active_section.prev();
+      var active_section;
+      active_thing = $(this)[0].element;
+
+      if (direction === 'up') {
+        active_section = $('#' + active_thing.id).prev()[0];
+      } else {
+        active_section = $('#' + active_thing.id)[0];
+      }
+
+      active_id = active_section.id;
 
       var active_link = $('nav a[href="#' + active_id + '"]');
 
       navigation_links.parent().removeClass('selected');
-      active_link.parent().addClass('selected');
+      active_link.parent().toggleClass('selected');
 
       sections.removeClass('current');
       $('#' + active_id).addClass('current');
