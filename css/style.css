@@ -402,7 +402,7 @@ hr.white {
 
 .colorbox {
 	float: left;
-	margin: 1rem;
+	margin: 0.5rem;
 	border: 0.1rem solid black;
 	background-color: #FFF;
 	text-align: center;
