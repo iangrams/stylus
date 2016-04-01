@@ -57,35 +57,30 @@ $(function() {
   });
 
 
-    WebFontConfig = {
-      google: { families: [ 'Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic:latin' ] }
-    };
+  WebFontConfig = {
+    google: { families: [ 'Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic:latin' ] }
+  };
 
-    /* Webfont Grab */
+  /* Webfont Grab */
 
-    (function() {
-      var wf = document.createElement('script');
-      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-      wf.type = 'text/javascript';
-      wf.async = 'true';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(wf, s);
-    })();
-
-    for (var i = 100; i < 900; i+=200) {
-    	var line = $('<p>').text('The quick brown fox jumps over the lazy dog.').css('font-weight', i);
-    	font_demo.append(line);
-    	font_demo.append(line.clone().css('font-style', 'italic'));
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
 
   allchars.append($('<p>').text('abcdefghijklmnopqrstuvwxyz'));
   allchars.append($('<p>').text('ABCDEFGHIJKLMNOPQRSTUVWXYZ'));
   allchars.append($('<p>').text('0123456789'));
-  for (var i = 100; i < 900; i+=100) {
+  for (var i = 100; i <= 900; i+=100) {
   	var line = $('<p>').text('Font weight ' + i).css('font-weight', i);
   	var weights = font_demo.find('.weights');
   	weights.append(line);
   	weights.append(line.clone().text('Font weight ' + i + ' italic').css('font-style', 'italic'));
-  };
+  }
 });
 
 $(document).ready(function() {

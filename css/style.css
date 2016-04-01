@@ -228,6 +228,7 @@ section .wrapper {
 
 .font-demo p{
 	margin-top: -1rem;
+	font-size: 1rem;
 }
 
 .font-demo input{
