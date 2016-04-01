@@ -15,7 +15,7 @@ var stickyHeader = new Waypoint.Sticky({
 /* Scroll Highlights and Actives */
 $(function() {
   var sections = $('section');
-  var navigation_links = $('nav a');
+  var navigation_links = $('nav li:not(:last-child) a');
   var font_demo = $('.font-demo');
   var allchars = font_demo.find('.allchars');
   var descriptions = $('.section-description');
