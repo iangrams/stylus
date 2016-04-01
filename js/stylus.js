@@ -20,23 +20,31 @@ $(function() {
   var allchars = font_demo.find('.allchars');
 
   sections.waypoint({
-    handler: function(event, direction) {
-      var active_section;
-      active_section = $(this);
-      active_id = active_section[0].element.id;
-      active_element = active_section[0].element;
+    handler: function(direction) {
 
-      if (direction === 'up') active_section = active_section.prev();
+      var active_section;
+      active_section = this.element;
+
+      console.log(this.previous)
+
+      if (direction === 'up') {
+        active_section = this.previous().element;
+      }
+
+      console.log(direction);
+      console.log(active_section);
+
+      active_id = active_section.id;
 
       var active_link = $('nav a[href="#' + active_id + '"]');
 
       navigation_links.parent().removeClass('selected');
-      active_link.parent().addClass('selected');
+      active_link.parent().toggleClass('selected');
 
-      sections.removeClass('current');
-      $('#' + active_id).addClass('current');
+      // sections.removeClass('current');
+      // $('#' + active_id).addClass('current');
 
-      window.location.hash = active_id;
+      //window.location.hash = active_id;
 
       $('.site-header h1').html(function() {
         var name = $('#' + active_id).data('title');
