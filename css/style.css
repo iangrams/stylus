@@ -27,6 +27,13 @@ html {
 	width: 100%;
 }
 
+body {
+	background-image: url('../img/ZLS_Blur_BG_Tile.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-attachment: fixed;
+}
+
 /*------------------------------*/
 /*             Type             */
 /*------------------------------*/
