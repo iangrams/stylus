@@ -23,13 +23,14 @@ $(function() {
     handler: function(direction) {
 
       var active_section;
-      active_thing = $(this)[0].element;
-
+      active_section = this.element;
+      console.log(this.previous)
       if (direction === 'up') {
-        active_section = $('#' + active_thing.id).prev()[0];
-      } else {
-        active_section = $('#' + active_thing.id)[0];
+        active_section = this.previous().element;
       }
+
+      console.log(direction);
+      console.log(active_section);
 
       active_id = active_section.id;
 
@@ -55,7 +56,7 @@ $(function() {
     $.scrollTo(
       $(this).attr("href"),
       {
-        duration: 500,
+        //duration: 500,
         //offset: { 'left':0, 'top':-0.15*$(window).height() }
       }
     );
