@@ -222,7 +222,7 @@ section .wrapper {
 }
 
 .colorbox{
-    float: right;
+    float: left;
     margin: 1rem;
     border: 0.1rem solid black;
     background-color: #FFF;
@@ -276,4 +276,10 @@ section .wrapper {
 
 .rightrow h3{
 	border-bottom: 0.1rem solid black;
+}
+
+ul.list{
+	font-size: 0.8rem;
+    margin-left: 15rem;
+    line-height: 1rem;
 }
