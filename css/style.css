@@ -2,8 +2,12 @@
 /*        Global/Utility        */
 /*------------------------------*/
 
-* {
+html {
+	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
 }
 
 .clearfix::before,
@@ -23,10 +27,6 @@
 	width: 100%;
 }
 
-html {
-	font-family: 'Open Sans', sans-serif;
-}
-
 /*------------------------------*/
 /*             Type             */
 /*------------------------------*/
@@ -35,6 +35,14 @@ h1 {
 	font-weight: normal;
 	font-variant: small-caps;
 	font-family: 'Crimson Text', sans-serif;
+	color: #528ec2;
+	font-size: 2.4rem;
+	margin: 0;
+}
+
+.first-page h1 {
+	font-size: 3rem;
+	color: #000;
 }
 
 h2 {
@@ -115,6 +123,17 @@ section .wrapper {
 .section-description {
 	width: 20%;
 	float: left;
+	height: 48rem;
+}
+
+.section-examples {
+	width: 70%;
+	float: left;
+	margin-left: 4rem;
+}
+
+.section-examples h3{
+	border-bottom: 0.1rem solid black;
 }
 
 /*------------------------------*/
@@ -157,6 +176,12 @@ section .wrapper {
 	padding: 1rem 1.5rem;
 	display: block;
 	position: relative;
+	color: black;
+	text-decoration: none;
+}
+
+.site-nav ul li.selected a {
+	color: #528ec2;
 }
 
 .site-nav ul li.selected a:after {
@@ -166,7 +191,7 @@ section .wrapper {
 	top: 0;
 	width: 3px;
 	height: 100%;
-	background-color: #ccc;
+	background-color: #528ec2;
 }
 
 .site-header {
@@ -177,6 +202,7 @@ section .wrapper {
 	width: 83.333333%;
 	z-index: 1001;
 	padding: 1rem;
+	padding-left: 10%;
 }
 .site-header.stuck {
 	position: fixed;
