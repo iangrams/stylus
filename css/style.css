@@ -546,3 +546,7 @@ ul.list {
 	bottom: 10%;
 	left: 0;
 }
+
+.no-bg {
+	background: none;
+}
