@@ -76,7 +76,7 @@ $(function() {
 
   WebFontConfig = {
     google: { families: [ 'Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic:latin',
-    'Crimson+Text:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic:latin', 'Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,900,700italic,900italic:latin', 'Montserrat:400,700:latin', 'Indie+Flower::latin'] }
+    'Crimson+Text:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic:latin', 'Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,900,700italic,900italic:latin', 'Montserrat:400,700:latin'] }
   };
 
   /* Webfont Grab */
@@ -146,7 +146,9 @@ $(document).ready(function() {
 	$('.font-demo input').on('change',function(event) {
 		$(this).parents('.font-demo').css('font-family', $(this).val());
 		$(this).hide();
-    $(this).siblings('.button').hide();
+    if($('link[href*="fonts.googleapis.com"]').attr('href').indexOf($(this).val().replace(/\W/g,'+')) > 0){
+      $(this).siblings('.button').hide();
+    }
 		$(this).siblings('h2').text($(this).val()).show();
 	});
   $('.font-demo .button').on('click',function(event) {
