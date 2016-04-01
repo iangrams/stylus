@@ -192,21 +192,38 @@ section .wrapper {
 .swatch{
 	width:6rem;
 	height:6rem;
+	border-bottom: 0.1rem solid black;
 }
 
 .colorbox{
-	width: 5rem;
     float: right;
     margin: 2rem;
+    border: 0.1rem solid black;
+    background-color: #FFF;
+    text-align: center;
 }
 
 .colorbox input{
 	width: 6rem;
+	text-align: center;
 }
 
 .font-demo{
 	margin: 1rem;
+	width: 28rem;
 	float: right;
+}
+
+.font-demo .allchars{
+	float: left;
+}
+
+.font-demo .weights{
+	float: right;
+}
+
+.font-demo h2{
+	border-bottom: 0.1rem solid black;
 }
 
 .font-demo p{
