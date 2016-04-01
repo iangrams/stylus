@@ -18,6 +18,7 @@ $(function() {
   var navigation_links = $('nav a');
   var font_demo = $('.font-demo');
   var allchars = font_demo.find('.allchars');
+  var descriptions = $('.section-description');
 
   sections.waypoint({
     handler: function(direction) {
@@ -25,14 +26,9 @@ $(function() {
       var active_section;
       active_section = this.element;
 
-      console.log(this.previous)
-
       if (direction === 'up') {
         active_section = this.previous().element;
       }
-
-      console.log(direction);
-      console.log(active_section);
 
       active_id = active_section.id;
 
@@ -41,8 +37,8 @@ $(function() {
       navigation_links.parent().removeClass('selected');
       active_link.parent().toggleClass('selected');
 
-      // sections.removeClass('current');
-      // $('#' + active_id).addClass('current');
+      sections.removeClass('current');
+      $('#' + active_id).addClass('current');
 
       //window.location.hash = active_id;
 
@@ -50,8 +46,10 @@ $(function() {
         var name = $('#' + active_id).data('title');
         return name
       })
-    }
+    },
+      //offset: 200
   });
+
 
   navigation_links.on('click', function(event) {
     event.preventDefault();
@@ -60,6 +58,17 @@ $(function() {
       {
         duration: 500,
         //offset: { 'left':0, 'top':-0.15*$(window).height() }
+      }
+    );
+  });
+
+  $('.type-nav a').on('click', function(event) {
+    event.preventDefault();
+    $.scrollTo(
+      $(this).attr("href"),
+      {
+        duration: 500,
+        offset: { 'top': -100 }
       }
     );
   });

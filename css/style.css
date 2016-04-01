@@ -159,9 +159,16 @@ section .wrapper {
 }
 
 .section-description {
+	transition: all 300ms;
 	width: 20%;
 	float: left;
-	height: 48rem;
+	opacity: 0;
+}
+
+.current .section-description {
+	position: fixed;
+	top: calc(75px + 2rem);
+	opacity: 1;
 }
 
 .section-examples {
@@ -255,7 +262,7 @@ section .wrapper {
 .site-header.stuck {
 	position: fixed;
 	top: 0;
-	background: rgba(255, 255, 255, 1);
+	//background: rgba(255, 255, 255, 1);
 }
 
 .type-nav {
@@ -300,7 +307,7 @@ section .wrapper {
 	margin-top: 3rem;
 	margin-left: 5%;
 }
-
+/*---------- Logos -----------*/
 .logo-example-main {
 	width: 60%;
 	padding: 10px;
@@ -320,7 +327,7 @@ section .wrapper {
 	padding: 10px;
 	float: left;
 }
-
+/*---------- Colors -----------*/
 .swatch {
 	width: 6rem;
 	height: 6rem;
@@ -339,7 +346,7 @@ section .wrapper {
 	width: 6rem;
 	text-align: center;
 }
-
+/*---------- Typography -----------*/
 .font-demo {
 	width: 100%;
 	height: 24rem;
@@ -399,7 +406,7 @@ section .wrapper {
 .rightrow h3 {
 	border-bottom: 0.1rem solid black;
 }
-
+/*---------- Navigation Items -----------*/
 .button-demo {
 	font-size: 24px;
 	font-family: 'Roboto';
