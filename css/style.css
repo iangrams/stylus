@@ -32,6 +32,11 @@ body {
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	background-attachment: fixed;
+
+}
+
+img {
+	max-width: 100%;
 }
 
 /*------------------------------*/
@@ -57,7 +62,7 @@ h2 {
 }
 
 h3 {
-	font-weight: normal;
+	font-weight: lighter;
 }
 
 p {
@@ -134,9 +139,9 @@ section .wrapper {
 }
 
 .section-examples {
-	width: 70%;
+	width: 50%;
 	float: left;
-	margin-left: 4rem;
+	margin-left: 10%;
 }
 
 .section-examples h3{
@@ -222,6 +227,43 @@ section .wrapper {
 /*         Other Stuff          */
 /*------------------------------*/
 
+.intro-text {
+	width: 30%;
+	margin-left: 20%;
+	margin-top: 20vh;
+}
+
+.intro-text h1 {
+	border-bottom: 1px solid black;
+}
+
+.changelog {
+	width: 90%;
+	display: inline-block;
+	margin-top: 3rem;
+	margin-left: 5%;
+}
+
+.logo-example-main {
+	width: 60%;
+	padding: 10px;
+	float: left;
+}
+
+.logo-example-secondary {
+	width: 100%;
+}
+
+.logo-example-secondary:first-child {
+	margin-bottom: 20px;
+}
+
+.secondary-logos {
+	width: 40%;
+	padding: 10px;
+	float: left;
+}
+
 .swatch{
 	width:6rem;
 	height:6rem;
@@ -274,41 +316,19 @@ section .wrapper {
     font-size: 3rem;
 }
 
+.rightrow{
+	width: 60%;
+    height: 24rem;
+    float: right;
+    padding-right: 2rem;
+}
+
+.rightrow h3{
+	border-bottom: 0.1rem solid black;
+}
+
 ul.list{
 	font-size: 0.8rem;
     margin-left: 15rem;
     line-height: 1rem;
-}
-
-.button-demo{
-	font-size: 24px;
-	font-family: 'Roboto';
-	width: 22rem;
-    text-align: center;
-}
-
-.psbutton{
-    background-color: #4F90C5;
-    padding: 0.5em;
-    color: #FFFFFF;
-}
-
-.psbutton:hover{
-    background-color: #3B6A91;
-    padding: 0.5em;
-    color: #FFFFFF;
-    font-weight: bold;
-}
-
-.sobutton{
-	border: 1px solid #4F90C5;
-    padding: 0.5em;
-    color: #4F90C5;
-}
-
-.sobutton:hover{
-	border: 1px solid #3B6A91;
-    padding: 0.5em;
-    color: #3B6A91;
-    font-weight: bold;
 }
