@@ -17,6 +17,7 @@ $(function() {
   var sections = $('section');
   var navigation_links = $('nav a');
   var font_demo = $('.font-demo');
+  var allchars = font_demo.find('.allchars');
 
   sections.waypoint({
     handler: function(event, direction) {
@@ -57,10 +58,14 @@ $(function() {
     );
   });
 
-  for (var i = 100; i < 900; i+=200) {
-  	var line = $('<p>').text('The quick brown fox jumps over the lazy dog.').css('font-weight', i);
-  	font_demo.append(line);
-  	font_demo.append(line.clone().css('font-style', 'italic'));
+  allchars.append($('<p>').text('abcdefghijklmnopqrstuvwxyz'));
+  allchars.append($('<p>').text('ABCDEFGHIJKLMNOPQRSTUVWXYZ'));
+  allchars.append($('<p>').text('0123456789'));
+  for (var i = 100; i < 900; i+=100) {
+  	var line = $('<p>').text('Font weight ' + i).css('font-weight', i);
+  	var weights = font_demo.find('.weights');
+  	weights.append(line);
+  	weights.append(line.clone().text('Font weight ' + i + ' italic').css('font-style', 'italic'));
   };
 });
 
