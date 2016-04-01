@@ -448,11 +448,12 @@ hr.white {
 	font-size: 1.8rem;
 }
 
-.font-demo span {
+.font-demo .button {
     border: 0.1rem black solid;
     width: 7rem;
     padding: 0.5rem;
     text-align: center;
+    display: block;
 }
 
 .font-demo-right {

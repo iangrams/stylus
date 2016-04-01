@@ -141,14 +141,15 @@ $(document).ready(function() {
 	//Font demo section
 	$('.font-demo h2').on('click',function(event) {
 		$(this).hide();
-		$(this).siblings('input, span').show().focus();
+		$(this).siblings('input, .button').show().focus();
 	});
 	$('.font-demo input').on('change',function(event) {
 		$(this).parents('.font-demo').css('font-family', $(this).val());
 		$(this).hide();
+    $(this).siblings('.button').hide();
 		$(this).siblings('h2').text($(this).val()).show();
 	});
-  $('.font-demo span').on('click',function(event) {
+  $('.font-demo .button').on('click',function(event) {
     addGFont($(this).siblings('input').val());
     $(this).hide();
   });
