@@ -75,7 +75,7 @@ $(function() {
 
 
   WebFontConfig = {
-    google: { families: [ 'Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic:latin' ] }
+    google: { families: [ 'Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic:latin', 'Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,900,700italic,900italic:latin', 'Montserrat:400,700:latin', 'Indie+Flower::latin'] }
   };
 
   /* Webfont Grab */
@@ -99,6 +99,15 @@ $(function() {
   	weights.append(line.clone().text('Font weight ' + i + ' italic').css('font-style', 'italic'));
   }
 });
+
+function getQueryVariable(query,variable){
+  var vars = query.split('?')[1].split('&');
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
+}
 
 $(document).ready(function() {
 	//Color swatch section
@@ -130,6 +139,7 @@ $(document).ready(function() {
     $(this).hide();
     $(this).siblings('h2').show();
   });
+  //Button demo section
   $('.button-demo').hover(function() {
     $(this).find('.normal').hide();
     $(this).find('.hover').show();
