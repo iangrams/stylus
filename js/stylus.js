@@ -110,6 +110,18 @@ function getQueryVariable(query,variable){
   return(false);
 }
 
+function addGFont(fontname){
+  if(fontname != null){
+    var cssEl = $('link[href*="fonts.googleapis.com"]');
+    var cssUrl = cssEl.attr('href');
+    var ogFam = getQueryVariable(cssUrl,'family');
+    var formattedFam = decodeURI(ogFam);
+    var newFam = encodeURI(formattedFam + "|" + fontname.replace(/\W/g,'+'));
+    cssEl.attr('href',cssUrl.replace(ogFam,newFam));
+  }
+}
+
+
 $(document).ready(function() {
 	//Color swatch section
 	$('.colorbox').on('click', function(event) {
@@ -129,16 +141,16 @@ $(document).ready(function() {
 	//Font demo section
 	$('.font-demo h2').on('click',function(event) {
 		$(this).hide();
-		$(this).siblings('input').show().focus();
+		$(this).siblings('input, span').show().focus();
 	});
 	$('.font-demo input').on('change',function(event) {
 		$(this).parents('.font-demo').css('font-family', $(this).val());
 		$(this).hide();
 		$(this).siblings('h2').text($(this).val()).show();
 	});
-  $('.font-demo input').on('blur',function(event) {
+  $('.font-demo span').on('click',function(event) {
+    addGFont($(this).siblings('input').val());
     $(this).hide();
-    $(this).siblings('h2').show();
   });
   //Button demo section
   $('.button-demo').hover(function() {
