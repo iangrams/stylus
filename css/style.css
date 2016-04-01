@@ -209,21 +209,23 @@ section .wrapper {
 }
 
 .font-demo{
-	margin: 1rem;
-	width: 28rem;
+	width: 30rem;
 	float: right;
+	padding-right: 4rem;
 }
 
 .font-demo .allchars{
-	float: left;
+	margin-left: -16rem;
 }
 
 .font-demo .weights{
 	float: right;
+    position: relative;
+    top: -7rem;
 }
 
 .font-demo h2{
-	border-bottom: 0.1rem solid black;
+	margin-left: -16rem;
 }
 
 .font-demo p{
@@ -233,4 +235,17 @@ section .wrapper {
 
 .font-demo input{
 	margin-bottom: 1rem;
+	margin-left: -16rem;
+	margin-top: 1.8rem;
+}
+
+.rightrow{
+	width: 60%;
+    height: 24rem;
+    float: right;
+    padding-right: 2rem;
+}
+
+.rightrow h3{
+	border-bottom: 0.1rem solid black;
 }

@@ -109,4 +109,8 @@ $(document).ready(function() {
 		$(this).hide();
 		$(this).siblings('h2').text($(this).val()).show();
 	});
+  $('.font-demo input').on('blur',function(event) {
+    $(this).hide();
+    $(this).siblings('h2').show();
+  });
 });
