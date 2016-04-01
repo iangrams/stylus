@@ -75,7 +75,7 @@ $(function() {
 
 
   WebFontConfig = {
-    google: { families: [ 'Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic:latin', 'Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,900,700italic,900italic:latin', 'Montserrat:400,700:latin', 'Indie+Flower::latin'] }
+    google: { families: [ 'Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic:latin', 'Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,900,700italic,900italic:latin', 'Montserrat:400,700:latin'] }
   };
 
   /* Webfont Grab */
@@ -109,6 +109,18 @@ function getQueryVariable(query,variable){
   return(false);
 }
 
+function addGFont(fontname){
+  if(fontname != null){
+    var cssEl = $('link[href*="fonts.googleapis.com"]');
+    var cssUrl = cssEl.attr('href');
+    var ogFam = getQueryVariable(cssUrl,'family');
+    var formattedFam = decodeURI(ogFam);
+    var newFam = encodeURI(formattedFam + "|" + fontname.replace(/\W/g,'+'));
+    cssEl.attr('href',cssUrl.replace(ogFam,newFam));
+  }
+}
+
+
 $(document).ready(function() {
 	//Color swatch section
 	$('.colorbox').on('click', function(event) {
@@ -128,16 +140,16 @@ $(document).ready(function() {
 	//Font demo section
 	$('.font-demo h2').on('click',function(event) {
 		$(this).hide();
-		$(this).siblings('input').show().focus();
+		$(this).siblings('input, span').show().focus();
 	});
 	$('.font-demo input').on('change',function(event) {
 		$(this).parents('.font-demo').css('font-family', $(this).val());
 		$(this).hide();
 		$(this).siblings('h2').text($(this).val()).show();
 	});
-  $('.font-demo input').on('blur',function(event) {
+  $('.font-demo span').on('click',function(event) {
+    addGFont($(this).siblings('input').val());
     $(this).hide();
-    $(this).siblings('h2').show();
   });
   //Button demo section
   $('.button-demo').hover(function() {

@@ -407,6 +407,12 @@ section .wrapper {
 	font-size: 1.8rem;
 }
 
+.font-demo span {
+	border: 0.1rem black solid;
+	width: 8rem;
+	padding: 0.5rem;
+}
+
 .font-demo-right {
 	width: 40%;
 	float: right;
