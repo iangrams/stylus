@@ -216,11 +216,11 @@ section .wrapper {
 }
 
 .colorbox{
-	float: right;
-	margin: 2rem;
-	border: 0.1rem solid black;
-	background-color: #FFF;
-	text-align: center;
+    float: right;
+    margin: 1rem;
+    border: 0.1rem solid black;
+    background-color: #FFF;
+    text-align: center;
 }
 
 .colorbox input{
