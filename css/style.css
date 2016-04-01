@@ -274,19 +274,41 @@ section .wrapper {
     font-size: 3rem;
 }
 
-.rightrow{
-	width: 60%;
-    height: 24rem;
-    float: right;
-    padding-right: 2rem;
-}
-
-.rightrow h3{
-	border-bottom: 0.1rem solid black;
-}
-
 ul.list{
 	font-size: 0.8rem;
     margin-left: 15rem;
     line-height: 1rem;
+}
+
+.button-demo{
+	font-size: 24px;
+	font-family: 'Roboto';
+	width: 22rem;
+    text-align: center;
+}
+
+.psbutton{
+    background-color: #4F90C5;
+    padding: 0.5em;
+    color: #FFFFFF;
+}
+
+.psbutton:hover{
+    background-color: #3B6A91;
+    padding: 0.5em;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.sobutton{
+	border: 1px solid #4F90C5;
+    padding: 0.5em;
+    color: #4F90C5;
+}
+
+.sobutton:hover{
+	border: 1px solid #3B6A91;
+    padding: 0.5em;
+    color: #3B6A91;
+    font-weight: bold;
 }

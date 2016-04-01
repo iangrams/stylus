@@ -121,4 +121,11 @@ $(document).ready(function() {
     $(this).hide();
     $(this).siblings('h2').show();
   });
+  $('.button-demo').hover(function() {
+    $(this).find('.normal').hide();
+    $(this).find('.hover').show();
+  }, function() {
+    $(this).find('.normal').show();
+    $(this).find('.hover').hide();
+  });
 });
