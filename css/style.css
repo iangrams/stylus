@@ -293,6 +293,17 @@ section .wrapper {
 
 /*------------------------------*/
 
+.modal-btn {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+.modal-btn a {
+	color: black;
+	text-decoration: none;
+}
+
 #bgvid{
 	position: absolute;;
 	top: 50%;
