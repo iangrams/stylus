@@ -1,13 +1,13 @@
 var stickyNav = new Waypoint.Sticky({
   element: $('.site-nav')[0],
-	direction: 'down right',
+	//direction: 'down right',
 	stuckClass: 'stuck',
 	wrapper: false
 });
 
 var stickyHeader = new Waypoint.Sticky({
   element: $('.site-header')[0],
-	direction: 'down right',
+	//direction: 'down right',
 	stuckClass: 'stuck',
 	wrapper: false
 });
@@ -29,8 +29,6 @@ $(function() {
       if (direction === 'up') active_section = active_section.prev();
 
       var active_link = $('nav a[href="#' + active_id + '"]');
-
-      console.log(active_id);
 
       navigation_links.parent().removeClass('selected');
       active_link.parent().addClass('selected');
