@@ -75,7 +75,8 @@ $(function() {
 
 
   WebFontConfig = {
-    google: { families: [ 'Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic:latin', 'Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,900,700italic,900italic:latin', 'Montserrat:400,700:latin', 'Indie+Flower::latin'] }
+    google: { families: [ 'Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic:latin',
+    'Crimson+Text:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic:latin', 'Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,900,700italic,900italic:latin', 'Montserrat:400,700:latin', 'Indie+Flower::latin'] }
   };
 
   /* Webfont Grab */
